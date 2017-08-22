@@ -9,6 +9,16 @@
     </div>
 </header>
 <main>
+    <nav class="navbar navbar-light">
+        <a class="navbar-brand" href="#">Flatfy</a>
+        <div class="nav-link">
+            <a class="navbar-text" href="#">What is?</a>
+            <a class="navbar-text" href="#">Use it</a>
+            <a class="navbar-text" href="#">Screenshot</a>
+            <a class="navbar-text" href="#">Credits</a>
+            <a class="navbar-text" href="#">Contact</a>
+        </div>
+    </nav>
     <div class="container">
         <?php
         $args = array(  'orderby'  => 'date',
