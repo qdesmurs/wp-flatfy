@@ -7,12 +7,12 @@ Version: 42tkt
 
 * {
     box-sizing: border-box;
-    cursor: url('doggge.png'), url('doggge.png') 5 5, progress;
+    cursor: url('img/doggge.png'), url('img/doggge.png') 5 5, progress;
     text-align: center;
     padding: 0 !important;
 }
 header {
-    background: url('intro5.jpg')center;
+    background: url('img/intro5.jpg')center;
     background-size: cover;
     height: 100vh;
     color: white;
@@ -76,7 +76,7 @@ nav {
     font-size: 25px;
 }
 .button_down {
-    background: url("circle.png");
+    background: url("img/circle.png");
     width: 5em;
     height: 5em;
     background-repeat: no-repeat;
@@ -135,7 +135,7 @@ nav {
     text-align: start;
 }
 .banner {
-    background: url("banner-bg.jpg")no-repeat center center;
+    background: url("img/banner-bg.jpg")no-repeat center center;
     background-size: cover;
     padding: 15vh !important;
     color: white;
