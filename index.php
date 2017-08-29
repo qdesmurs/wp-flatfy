@@ -36,7 +36,6 @@
             setup_postdata($post); ?>
             <div class='col-md-4'>
                     <?php the_post_thumbnail('full') ?>
-                <h3><?php the_title() ?></h3>
                 <p class="text"><?php the_content() ?></p>
             </div>
             <?php
@@ -61,7 +60,7 @@
                     </div>
                 </div>
                 <div class='col-md-6'>
-                    <?php the_post_thumbnail() ?>
+                    <a href=<?php echo '"'.get_stylesheet_directory_uri( ).'/img/ipad.png"';  ?> target="_blank"><?php the_post_thumbnail() ?></a>
                 </div>
                 <?php
             }
@@ -79,7 +78,7 @@
             foreach ($posts as $post) {
                 setup_postdata($post); ?>
                 <div class='col-md-6'>
-                    <?php the_post_thumbnail() ?>
+                    <a href=<?php echo '"'.get_stylesheet_directory_uri( ).'/img/iphone.png"';  ?> target="_blank"><?php the_post_thumbnail() ?></a>
                 </div>
                 <div class="col-md-6">
                     <p class="text"><?php the_content() ?></p>
@@ -147,7 +146,15 @@
             $posts = get_posts($args);
             foreach ($posts as $post) {
                 setup_postdata($post); ?>
-                    <?php the_content() ?>
+                <div class="col-md-6">
+                    <div class="col-md-4">
+                        <i class="fa fa-<?php echo get_post_meta($post->ID, 'fa_icon', true) ?> fa-4x" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="col-md-8">
+                        <?php the_content() ?>
+                    </div>
+                </div>
                 <?php
             }
             ?>

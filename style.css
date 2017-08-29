@@ -8,8 +8,13 @@ Version: 42tkt
 * {
     box-sizing: border-box;
     cursor: url('img/doggge.png'), url('img/doggge.png') 5 5, progress;
+}
+body {
     text-align: center;
-    padding: 0 !important;
+    color: #34495e;
+}
+p, a {
+    font-family: 'Cinzel', serif;
 }
 header {
     background: url('img/intro5.jpg')center;
@@ -18,17 +23,19 @@ header {
     color: white;
 }
 header h1 {
-    font-size: 100px;
-    margin-top: 40vh;
+    font-size: 200px;
+    margin-top: 30vh;
+    margin-bottom: 5vh;
+    font-family: 'Sedgwick Ave Display', cursive;
+    text-shadow: 0 0 15px white;
 }
 header h1:hover {
     animation:rainbow 1s infinite;
-    text-shadow: 0 0 15px white;
 }
 header button {
     border: none;
     border-radius: 5px;
-    padding: 1vh !important;
+    padding: 1vh;
 }
 @-webkit-keyframes rainbow {
 0% {color: #ff0000;}
@@ -69,9 +76,6 @@ nav {
 .navbar a:hover {
     animation:rainbow 1s infinite;
 }
-.navbar-brand {
-    line-height: 50px;
-}
 .navbar .navbar-brand {
     font-size: 25px;
 }
@@ -86,14 +90,29 @@ nav {
 .button_down a:hover {
     animation:rainbow 1s infinite;
 }
+.tablet h3 {
+    margin-top: 0;
+}
+.tablet img {
+    margin-top: 1vh;
+}
+.tablet .button {
+    padding-left: 1.5vw;
+}
 .tablet, .doge {
     background-color: #F8F8F8;
+}
+.tablet img:hover, .iphone img:hover {
+    cursor: url("img/zoom.png"), url('img/zoom.png') 5 5, progress;
+}
+.tablet, .iphone, .doge {
+    padding: 5vh 0;
 }
 .tablet img, .iphone img, .doge img {
     width: 50%;
     height: 50%;
 }
-.col-md-6 h3, .col-md-6 p, .col-md-6 ul li, .button {
+.col-md-6 h3, .col-md-6 p, .col-md-6 ul li, .button, .col-md-6 h4 {
     text-align: left;
 }
 .doge ul {
@@ -110,43 +129,38 @@ nav {
 .newsletter {
     background-color: #34495E;
     color: white;
-    padding: 5vh !important;
+    padding: 5vh;
 }
 .newsletter button {
     background-color: #1ABC9C;
     border: none;
     border-radius: 5px;
-    padding: 2vh !important;
+    padding: 2vh;
 }
 .credits i {
     background-color: #F0F1EC;
     border-radius: 50%;
-    padding: 0.5em !important;
+    padding: 0.5em;
 }
 .credits i:hover {
-    transform: rotate(360deg);
-    transition-duration: 1s;
     background-color: #1ABC9C;
 }
 .credits .col-md-6 {
     margin: 5vh 0;
 }
-.credits .col-md-8 {
-    text-align: start;
-}
 .banner {
     background: url("img/banner-bg.jpg")no-repeat center center;
     background-size: cover;
-    padding: 15vh !important;
+    padding: 15vh;
     color: white;
 }
 .banner i {
     background-color: #34495E;
-    width: 12%;
+    width: 12.5%;
     margin: auto;
     color: white;
     display: inline-flex;
-    padding: 2vh !important;
+    padding: 2vh;
     border-radius: 5px;
 }
 .banner h2 {
@@ -155,19 +169,22 @@ nav {
 .banner p {
     margin: 0;
 }
+.form-control {
+    text-align: left;
+}
 footer {
     background-color: #EDEFF1;
     margin-top: 5vh;
 }
 footer .col-md-7 {
     text-align: start;
-    padding: 5vh !important;
+    padding: 5vh;
 }
 footer .col-md-5 {
     background-color: #34495E;
     color: white;
     text-align: start;
-    padding: 5vh !important;
+    padding: 5vh;
 }
 footer .col-md-5 a {
     color: white;
@@ -190,24 +207,32 @@ footer .goto {
     background-color: #1ABC9C;
     border: none;
     border-radius: 3px;
-    padding: 1vh !important;
+    padding: 1vh;
     color: white;
 }
 .bi2 {
     background-color: #3498DB;
 }
 .input-group {
-    padding: 6px 12px !important;
     width: 75%;
     margin: auto;
 }
+.input-group-addon {
+    padding: 6px 12px;
+}
+#middle .col-md-4 {
+    padding: 5vh;
+}
 #submit {
-    padding: 1vh !important;
+    padding: 1vh;
 }
 .contact h3, .contact p {
     text-align: center;
 }
-#middle img:hover {
-    transform: rotate(360deg);
+#middle img, .credits i {
+    transition-property: transform;
     transition-duration: 1s;
+}
+#middle img:hover, .credits i:hover {
+    transform: rotate(360deg);
 }
