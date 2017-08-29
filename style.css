@@ -8,6 +8,8 @@ Version: 42tkt
 * {
     box-sizing: border-box;
     cursor: url('doggge.png'), url('doggge.png') 5 5, progress;
+    text-align: center;
+    padding: 0 !important;
 }
 header {
     background: url('intro5.jpg')center;
@@ -22,6 +24,11 @@ header h1 {
 header h1:hover {
     animation:rainbow 1s infinite;
     text-shadow: 0 0 15px white;
+}
+header button {
+    border: none;
+    border-radius: 5px;
+    padding: 1vh !important;
 }
 @-webkit-keyframes rainbow {
 0% {color: #ff0000;}
@@ -39,6 +46,13 @@ header h1:hover {
 .lead {
     font-size: 14px;
 }
+.twit {
+    background-color: #498FBD;
+}
+.dl {
+    background-color: inherit;
+    border: 1px solid white;
+}
 nav {
     display: flex;
     justify-content: center;
@@ -55,9 +69,145 @@ nav {
 .navbar a:hover {
     animation:rainbow 1s infinite;
 }
+.navbar-brand {
+    line-height: 50px;
+}
 .navbar .navbar-brand {
     font-size: 25px;
 }
+.button_down {
+    background: url("circle.png");
+    width: 5em;
+    height: 5em;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-top: 15em;
+}
 .button_down a:hover {
     animation:rainbow 1s infinite;
+}
+.tablet, .doge {
+    background-color: #F8F8F8;
+}
+.tablet img, .iphone img, .doge img {
+    width: 50%;
+    height: 50%;
+}
+.col-md-6 h3, .col-md-6 p, .col-md-6 ul li, .button {
+    text-align: left;
+}
+.doge ul {
+    margin-left: 5vh;
+}
+.skate {
+    margin: 10vh auto;
+}
+.skate img {
+    width: 95%;
+    height: 100%;
+    border-radius: 5px;
+}
+.newsletter {
+    background-color: #34495E;
+    color: white;
+    padding: 5vh !important;
+}
+.newsletter button {
+    background-color: #1ABC9C;
+    border: none;
+    border-radius: 5px;
+    padding: 2vh !important;
+}
+.credits i {
+    background-color: #F0F1EC;
+    border-radius: 50%;
+    padding: 0.5em !important;
+}
+.credits i:hover {
+    transform: rotate(360deg);
+    transition-duration: 1s;
+    background-color: #1ABC9C;
+}
+.credits .col-md-6 {
+    margin: 5vh 0;
+}
+.credits .col-md-8 {
+    text-align: start;
+}
+.banner {
+    background: url("banner-bg.jpg")no-repeat center center;
+    background-size: cover;
+    padding: 15vh !important;
+    color: white;
+}
+.banner i {
+    background-color: #34495E;
+    width: 12%;
+    margin: auto;
+    color: white;
+    display: inline-flex;
+    padding: 2vh !important;
+    border-radius: 5px;
+}
+.banner h2 {
+    font-size: 10vh;
+}
+.banner p {
+    margin: 0;
+}
+footer {
+    background-color: #EDEFF1;
+    margin-top: 5vh;
+}
+footer .col-md-7 {
+    text-align: start;
+    padding: 5vh !important;
+}
+footer .col-md-5 {
+    background-color: #34495E;
+    color: white;
+    text-align: start;
+    padding: 5vh !important;
+}
+footer .col-md-5 a {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+}
+footer h5 {
+    margin: 0;
+}
+footer p, footer h3, footer h5 {
+    text-align: left;
+}
+footer .goto {
+    margin-top: 3em;
+}
+.hideme {
+    opacity:0;
+}
+.bi1, .bi2 {
+    background-color: #1ABC9C;
+    border: none;
+    border-radius: 3px;
+    padding: 1vh !important;
+    color: white;
+}
+.bi2 {
+    background-color: #3498DB;
+}
+.input-group {
+    padding: 6px 12px !important;
+    width: 75%;
+    margin: auto;
+}
+#submit {
+    padding: 1vh !important;
+}
+.contact h3, .contact p {
+    text-align: center;
+}
+#middle img:hover {
+    transform: rotate(360deg);
+    transition-duration: 1s;
 }
