@@ -73,23 +73,20 @@
             $args = array(  'category' => '4',
             'orderby'  => 'date',
             'order'    => 'DESC',
-            'posts_per_page'   => 1,);
+            'posts_per_page'   => 2,);
             $posts = get_posts($args);
             foreach ($posts as $post) {
                 setup_postdata($post); ?>
-                <div class='col-md-6'>
-                    <a href=<?php echo '"'.get_stylesheet_directory_uri( ).'/img/iphone.png"';  ?> target="_blank"><?php the_post_thumbnail() ?></a>
-                </div>
                 <div class="col-md-6">
-                    <p class="text"><?php the_content() ?></p>
-                    <div class="button">
-                        <button type="button" name="details" class="bi1">View Details</button>
-                        <button type="button" name="visit" class="bi2">Visit Website</button>
-                    </div>
+                    <?php the_content() ?>
                 </div>
                 <?php
             }
             ?>
+            <div class="button">
+                <button type="button" name="details" class="bi1">View Details</button>
+                <button type="button" name="visit" class="bi2">Visit Website</button>
+            </div>
         </div>
     </div>
     <div class="doge hideme">
@@ -118,13 +115,11 @@
         $args = array(  'category' => '2',
                         'orderby'  => 'date',
                         'order'    => 'DESC',
-                        'posts_per_page'   => 3,);
+                        'posts_per_page'   => 1,);
         $posts = get_posts($args);
         foreach ($posts as $post) {
             setup_postdata($post); ?>
-            <div class='col-md-4'>
-                <?php the_post_thumbnail('full') ?>
-            </div>
+                <?php the_content() ?>
             <?php
         }
         ?>
@@ -247,10 +242,7 @@
     </div>
 
 </footer>
-<script
-			  src="https://code.jquery.com/jquery-3.2.1.min.js"
-			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-			  crossorigin="anonymous"></script>
+
 <script type="text/javascript">
 $(document).ready(function() {
 $(window).scroll( function(){

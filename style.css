@@ -236,3 +236,6 @@ footer .goto {
 #middle img:hover, .credits i:hover {
     transform: rotate(360deg);
 }
+#slider_3 {
+    opacity: 1;
+}
