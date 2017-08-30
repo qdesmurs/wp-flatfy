@@ -90,6 +90,9 @@ nav {
 .button_down a:hover {
     animation:rainbow 1s infinite;
 }
+.hideme {
+    transition: 0.5s;
+}
 .tablet h3 {
     margin-top: 0;
 }
@@ -200,8 +203,17 @@ footer p, footer h3, footer h5 {
 footer .goto {
     margin-top: 3em;
 }
-.hideme {
-    opacity:0;
+.hideright {
+    opacity: 0;
+    transform: translateX(100%);
+}
+.hideleft {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.megarotate {
+    opacity: 0;
+    transform: rotate(360deg);
 }
 .bi1, .bi2 {
     background-color: #1ABC9C;

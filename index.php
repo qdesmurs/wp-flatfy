@@ -52,14 +52,14 @@
             $posts = get_posts($args);
             foreach ($posts as $post) {
                 setup_postdata($post); ?>
-                <div class="col-md-6">
+                <div class="col-md-6 hideleft">
                     <p class="text"><?php the_content() ?></p>
                     <div class="button">
                         <button type="button" name="details" class="bi1">View Details</button>
                         <button type="button" name="visit" class="bi2">Visit Website</button>
                     </div>
                 </div>
-                <div class='col-md-6'>
+                <div class='col-md-6 hideright'>
                     <a href=<?php echo '"'.get_stylesheet_directory_uri( ).'/img/ipad.png"';  ?> target="_blank"><?php the_post_thumbnail() ?></a>
                 </div>
                 <?php
@@ -77,7 +77,7 @@
             $posts = get_posts($args);
             foreach ($posts as $post) {
                 setup_postdata($post); ?>
-                <div class="col-md-6">
+                <div class="col-md-6 megarotate">
                     <?php the_content() ?>
                 </div>
                 <?php
@@ -99,8 +99,10 @@
             $posts = get_posts($args);
             foreach ($posts as $post) {
                 setup_postdata($post); ?>
+                <div class='col-md-6 hideleft'>
                     <p class="text"><?php the_content() ?></p>
-                <div class='col-md-6'>
+                </div>
+                <div class='col-md-6 hideright'>
                     <?php the_post_thumbnail() ?>
                 </div>
                 <?php
@@ -250,7 +252,33 @@ $(window).scroll( function(){
         var bottom_of_object = $(this).offset().top + $(this).outerHeight();
         var bottom_of_window = $(window).scrollTop() + $(window).height();
         if( bottom_of_window > bottom_of_object ){
-            $(this).animate({'opacity':'1'},500);
+            $(this).removeClass('hideme');
+            $(this).removeClass('hideright');
+            $(this).removeClass('hideleft');
+        }
+    });
+    $('.hideleft').each( function(i){
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        if( bottom_of_window > bottom_of_object ){
+            $(this).css({'transition':'1s'});
+            $(this).removeClass('hideleft');
+        }
+    });
+    $('.hideright').each( function(i){
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        if( bottom_of_window > bottom_of_object ){
+            $(this).css({'transition':'1s'});
+            $(this).removeClass('hideright');
+        }
+    });
+    $('.megarotate').each( function(i){
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        if( bottom_of_window > bottom_of_object ){
+            $(this).css({'transition':'1s'});
+            $(this).removeClass('megarotate');
         }
     });
 });
